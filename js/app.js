@@ -52,7 +52,11 @@ let team = [
 //  le informazioni di nome, ruolo e la stringa della foto
 //  (in questo fase usiamo il ciclo for…in )
 
-
+for (let i = 0; i < team.length; i++) {
+    for (let key in team[i]) {
+        console.log(team[i][key])
+    }
+}
 
 // MILESTONE 2:
 // Stampare le stesse informazioni su DOM sotto forma di stringhe
