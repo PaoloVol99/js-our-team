@@ -52,14 +52,21 @@ let team = [
 //  le informazioni di nome, ruolo e la stringa della foto
 //  (in questo fase usiamo il ciclo for…in )
 
+const divElement = document.getElementById('div-element')
+
 for (let i = 0; i < team.length; i++) {
     for (let key in team[i]) {
         console.log(team[i][key])
+        // MILESTONE 2:
+        // Stampare le stesse informazioni su DOM sotto forma di stringhe
+        divElement.innerHTML += `<div>${team[i][key]}</div>`
     }
 }
 
-// MILESTONE 2:
-// Stampare le stesse informazioni su DOM sotto forma di stringhe
+
+
+
+
 // BONUS 1:
 // Trasformare la stringa foto in una immagine effettiva
 // BONUS 2:
