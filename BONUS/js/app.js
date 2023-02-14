@@ -10,40 +10,40 @@
 
 let team = [
     {
+        avatar: `<img src="./img/wayne-barnett-founder-ceo.jpg">`,
         firstName: 'Wayne',
         lastName: 'Barnet',
         role: 'Founder & CEO',
-        avatar: `wayne-barnett-founder-ceo.jpg`
     },
     {
+        avatar: `<img src="./img/angela-caroll-chief-editor.jpg">`,
         firstName: 'Angela',
         lastName: 'Caroll',
         role: 'Chief Editor',
-        avatar: `angela-caroll-chief-editor.jpg`
     },
     {
+        avatar: `<img src="./img/walter-gordon-office-manager.jpg">`,
         firstName: 'Walter',
         lastName: 'Gordon',
         role: 'Office Manager',
-        avatar: `walter-gordon-office-manager.jpg`
     },
     {
+        avatar: `<img src="./img/angela-lopez-social-media-manager.jpg">`,
         firstName: 'Angela',
         lastName: 'Lopez',
         role: 'Social Media Manager',
-        avatar: `angela-lopez-social-media-manager.jpg`
     },
     {
+        avatar: `<img src="./img/scott-estrada-developer.jpg">`,
         firstName: 'Scott',
         lastName: 'Estrada',
         role: 'Developer',
-        avatar: `scott-estrada-developer.jpg`
     },
     {
+        avatar: `<img src="./img/barbara-ramos-graphic-designer.jpg">`,
         firstName: 'Barbara',
         lastName: 'Ramos',
         role: 'Founder & CEO',
-        avatar: `barbara-ramos-graphic-designer.jpg`
     }
 ]
 
@@ -54,22 +54,37 @@ let team = [
 
 const divElement = document.getElementById('div-element')
 
-for (let i = 0; i < team.length; i++) {
-    for (let key in team[i]) {
-        console.log(team[i][key])
-        // MILESTONE 2:
-        // Stampare le stesse informazioni su DOM sotto forma di stringhe
-        divElement.innerHTML += `<div>${team[i][key]}</div>`
-    }
-}
-
-
-
-
+// for (let i = 0; i < team.length; i++) {
+//     for (let key in team[i]) {
+//         console.log(team[i][key])
+//         // MILESTONE 2:
+//         // Stampare le stesse informazioni su DOM sotto forma di stringhe
+//         divElement.innerHTML += `<div>${team[i][key]}</div>`
+//     }
+// }
 
 // BONUS 1:
 // Trasformare la stringa foto in una immagine effettiva
+
+
 // BONUS 2:
 // Organizzare i singoli membri in card/schede
 //  (trovato un esempio allegato, ma siete liberi di gestire
 //  la grafica a vostro piacimento)
+
+let card = `<div class="card"></div>`
+
+for (let i = 0; i < team.length; i++) {
+    divElement.innerHTML += `<div class="card"></div>`
+}
+
+const cardElements = document.querySelectorAll('.card')
+
+for (let i = 0; i < team.length; i++) {
+    for (let key in team[i]) {
+        console.log(team[i][key])
+        cardElements[i].innerHTML += `<div class="info">${team[i][key]}</div>`
+    }
+}
+
+
